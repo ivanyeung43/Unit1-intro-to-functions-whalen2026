@@ -2,20 +2,22 @@ import turtle
 from turtle import *
 t = Turtle()
 t.shape('turtle')
+sidelength = 100
+rotate = 90
+def square(sidelength,rotate):
+    for i in range(4):
+        t.forward(sidelength)
+        t.left(rotate)
 
-
-
-def doubleSquares(iRange):
+def addSquares(iRange):
     length = 25
     for i in range(iRange):
-        def square(x,y):
-        for i in range(4):
-            t.forward(x)
-            t.left(y)
-        square(100,90)
-        square(length, 90)
-        length = length * 2
-doubleSquares(5)
+        square(length, rotate)
+        length += 5
+        t.right(5)
+addSquares(60)
+
+
 
 
 turtle.done()
